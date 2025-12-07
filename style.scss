@@ -1,0 +1,130 @@
+@import '_mixins';
+@import '_variables';
+
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+.contenedor{
+    margin: 0 auto;
+    max-width: 1100px;
+}
+
+header{
+    display: grid;
+    grid-template-columns: 1fr;   
+    img{
+        max-width: 100%;
+        justify-items: start;
+    }
+    
+}
+
+.navegador{
+    background-color: black;
+    ul{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    list-style: none;
+    color: white;
+    text-align: center;
+    }
+    li:hover {
+        background-color: #c9c84a;
+    }
+
+    
+}
+
+.pizza1{
+    img{
+    max-width: 100%;
+    }
+}
+.principal{
+    display: grid;
+    grid-template-columns:minmax(10px, max-content) auto minmax(100px, max-content);
+    grid-template-rows: repeat(4, auto);
+    
+    .lista{
+    background-color: #c9c84a;
+    grid-row: 1/2;
+    grid-column: 1/5;
+    place-items: center;
+    
+        ul{
+            list-style: none;
+            li{
+                margin-bottom: 10px;
+            }
+        }
+        
+    }
+    .mini1{
+        grid-row: 2/3;
+        grid-column: 1/5;
+        justify-self: center;
+        max-width: 100%;
+    }
+    .mini2{
+        grid-row: 3/4;
+         grid-column: 1/5;
+        justify-self: center;
+         max-width: 100%;
+    }
+    .texto{
+       
+        grid-row: 4/5;
+        grid-column: 1/5;
+        place-items: center;
+        text-align: center;
+      
+    }
+    @include tablet{
+        .lista{
+            
+            grid-column: 1/2;
+            grid-column: 1/2;
+        }
+        .texto{
+            grid-column: 3/4;
+            grid-row: 1/5;
+        }
+        .mini1{
+            grid-column: 4/5;
+            grid-row: 2/3;
+            max-width: 100%;
+        }
+        .mini2{
+            grid-column: 1/2;
+            grid-row: 4/5;
+            max-width: 100%;
+        }
+
+    }
+}
+
+
+
+
+footer{
+    background-color: #c9c84a;
+}
+.fArticulos{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    background-color: #c9c84a;
+    text-align: center;
+    place-items: center;
+  
+    
+}
+.abajoF{
+        background-color: black;
+        color: white;
+        display: grid;
+        place-items:center;
+        padding: 10px;
+    }

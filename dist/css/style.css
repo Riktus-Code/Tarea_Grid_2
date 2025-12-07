@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+.contenedor {
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+header img {
+  max-width: 100%;
+  justify-items: start;
+}
+
+.navegador {
+  background-color: black;
+}
+.navegador ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  list-style: none;
+  color: white;
+  text-align: center;
+}
+
+.pizza1 img {
+  max-width: 100%;
+}
+
+.lista {
+  background-color: #c9c84a;
+}
