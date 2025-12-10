@@ -19,20 +19,126 @@ header img {
 }
 
 .navegador {
+  margin-bottom: 1rem;
   background-color: black;
 }
 .navegador ul {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   list-style: none;
   color: white;
   text-align: center;
 }
+.navegador li {
+  padding: 10px;
+}
+.navegador li:hover {
+  background-color: #c9c84a;
+}
 
+.pizza1 {
+  margin-bottom: 1rem;
+}
 .pizza1 img {
   max-width: 100%;
 }
 
-.lista {
+.principal {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+.principal .lista {
   background-color: #c9c84a;
+  list-style: none;
+  text-align: center;
+}
+.principal .mini1 {
+  justify-self: center;
+}
+.principal .mini2 {
+  justify-self: center;
+}
+.principal .titulo {
+  justify-self: center;
+}
+.principal .texto {
+  justify-self: center;
+}
+.principal .texto2 {
+  justify-self: center;
+}
+.principal .texto3 {
+  justify-self: center;
+}
+@media (min-width: 780px) {
+  .principal {
+    grid-template-columns: minmax(10px, -webkit-max-content) auto minmax(100px, -webkit-max-content);
+    grid-template-columns: minmax(10px, max-content) auto minmax(100px, max-content);
+    grid-template-rows: repeat(4, auto);
+  }
+  .principal .titulo {
+    grid-column: 1/4;
+    grid-row: 1/2;
+  }
+  .principal .lista {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    list-style: none;
+    color: white;
+    text-align: center;
+  }
+  .principal .lista ul {
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+  .principal .lista ul li {
+    padding: 1rem;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+  .principal .texto {
+    grid-column: 2/3;
+    grid-row: 2/4;
+  }
+  .principal .texto2 {
+    grid-column: 2/3;
+    grid-row: 4/5;
+    text-align: center;
+    align-self: center;
+  }
+  .principal .texto3 {
+    grid-column: 2/3;
+    grid-row: 5/7;
+  }
+  .principal .mini1 {
+    grid-column: 3/4;
+    grid-row: 3/5;
+    max-width: 100%;
+  }
+  .principal .mini2 {
+    grid-column: 1/2;
+    grid-row: 5/6;
+    max-width: 100%;
+  }
+}
+
+footer {
+  background-color: #c9c84a;
+}
+
+.fArticulos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  background-color: #c9c84a;
+  text-align: center;
+  place-items: center;
+}
+
+.abajoF {
+  background-color: black;
+  color: white;
+  display: grid;
+  place-items: center;
+  padding: 10px;
 }
