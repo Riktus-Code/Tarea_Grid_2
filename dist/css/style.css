@@ -48,39 +48,19 @@ header img {
   grid-template-columns: 1fr;
   gap: 1rem;
 }
-.principal .lista {
-  background-color: #c9c84a;
-  list-style: none;
-  text-align: center;
-}
-.principal .mini1 {
-  justify-self: center;
-}
-.principal .mini2 {
-  justify-self: center;
-}
-.principal .titulo {
-  justify-self: center;
-}
-.principal .texto {
-  justify-self: center;
-}
-.principal .texto2 {
-  justify-self: center;
-}
-.principal .texto3 {
-  justify-self: center;
-}
 @media (min-width: 780px) {
   .principal {
     grid-template-columns: minmax(10px, -webkit-max-content) auto minmax(100px, -webkit-max-content);
     grid-template-columns: minmax(10px, max-content) auto minmax(100px, max-content);
     grid-template-rows: repeat(4, auto);
   }
-  .principal .titulo {
-    grid-column: 1/4;
-    grid-row: 1/2;
-  }
+}
+.principal .lista {
+  background-color: #c9c84a;
+  list-style: none;
+  text-align: center;
+}
+@media (min-width: 780px) {
   .principal .lista {
     grid-column: 1/2;
     grid-row: 2/3;
@@ -97,29 +77,68 @@ header img {
     -ms-flex-item-align: center;
         align-self: center;
   }
+}
+.principal .mini1 {
+  justify-self: center;
+}
+@media (min-width: 780px) {
+  .principal .mini1 {
+    grid-column: 3/4;
+    grid-row: 3/4;
+  }
+  .principal .mini1 img {
+    max-width: 100%;
+  }
+}
+.principal .mini2 {
+  justify-self: center;
+}
+@media (min-width: 780px) {
+  .principal .mini2 {
+    grid-column: 1/2;
+    grid-row: 5/6;
+  }
+  .principal .mini2 img {
+    max-width: 100%;
+  }
+}
+.principal .titulo {
+  justify-self: center;
+}
+@media (min-width: 780px) {
+  .principal .titulo {
+    grid-column: 1/4;
+    grid-row: 1/2;
+  }
+}
+.principal .texto {
+  justify-self: center;
+}
+@media (min-width: 780px) {
   .principal .texto {
     grid-column: 2/3;
     grid-row: 2/4;
   }
+}
+.principal .texto2 {
+  justify-self: center;
+  font-size: 20px;
+}
+@media (min-width: 780px) {
   .principal .texto2 {
     grid-column: 2/3;
     grid-row: 4/5;
     text-align: center;
     align-self: center;
   }
+}
+.principal .texto3 {
+  justify-self: center;
+}
+@media (min-width: 780px) {
   .principal .texto3 {
     grid-column: 2/3;
     grid-row: 5/7;
-  }
-  .principal .mini1 {
-    grid-column: 3/4;
-    grid-row: 3/5;
-    max-width: 100%;
-  }
-  .principal .mini2 {
-    grid-column: 1/2;
-    grid-row: 5/6;
-    max-width: 100%;
   }
 }
 
